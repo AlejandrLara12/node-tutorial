@@ -23,6 +23,7 @@ geocode.geocodeAddress(argv.address, (errorMessage, results) => {
   } else {
     //console.log(JSON.stringify(results, undefined, 2));
     weather.getWeather(results.latitude, results.longitude, (errorMessage, weatherResults) => {
+      console.log('weatherResults', weatherResults);
       console.log((errorMessage) ? errorMessage : `It's ${weatherResults.temperature} °F apparent temperature is ${weatherResults.apparentTemperature}`);
     });
   }
