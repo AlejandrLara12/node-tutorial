@@ -36,3 +36,6 @@ body                        is just a shortcut, like response.body
 
 
 # Chaining callbacks together
+
+# Intro to ES6 promises
+when resolved or rejected is like a return
