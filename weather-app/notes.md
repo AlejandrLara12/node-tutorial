@@ -39,3 +39,5 @@ body                        is just a shortcut, like response.body
 
 # Intro to ES6 promises
 when resolved or rejected is like a return
+
+# Advanced Promises
