@@ -41,3 +41,9 @@ body                        is just a shortcut, like response.body
 when resolved or rejected is like a return
 
 # Advanced Promises
+We can have ordered promesis, one depending on another one.
+When we stack them, we are able to use multiples 'then' 
+'then' has two parameters, then(ifResolved,ifRejected)
+but if the first 'then' is rejected, the second 'then' will be resolved,
+to avoid that, we have te funciton 'catch' that will be triggered with any 
+rejected action of any 'then'
