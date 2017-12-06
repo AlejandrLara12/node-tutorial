@@ -32,9 +32,10 @@ axios.get(geocodeUrl)
     return axios.get(weatherUrl);
   })
   .then((response) => {
-    let temperature = response.data.currentry.temperature;
-    let apparentTemperature = response.data.currentry.apparentTemperature;
-
+    // console.log(response);
+    let temperature = response.data.currently.temperature;
+    let apparentTemperature = response.data.currently.apparentTemperature;
+    console.log(`It's currently ${temperature}°F. Feels like ${apparentTemperature}°F.`);
   })
   .catch((e) => {
     if(e.code === 'ENOTFOUND'){
@@ -43,5 +44,3 @@ axios.get(geocodeUrl)
       console.log(e.message);
     }
   });
-
-  // testing commit
