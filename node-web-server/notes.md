@@ -11,3 +11,6 @@ nom i -g nodemon; upates nodemon
 
 We can have partials, which are like templates
 We can create functions named 'helpers' and we can use them inside templates 
+
+
+# Adding Version control GIT

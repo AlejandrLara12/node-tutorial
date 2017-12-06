@@ -1,11 +1,30 @@
 const express = require('express');
 const hbs = require('hbs');
+const fs = require('fs');
 
 let app = express();
 
 //middlewear
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs');
+
+app.use((req, res, next) => {
+  let now = new Date().toString();
+  var log = `${now} ${req.method} ${req.url}`;
+  console.log(log);
+  fs.appendFile('server.log', log + '\n', (err) => {
+    if (err) { console.log('Unable to append to serve.log'); }
+  });
+  next();
+});
+
+// app.use((req, res, next) => {
+//   res.render('maitenance.hbs', {
+//     pageTitle: "We'll be right back",
+//     message: "The site is currentrly being updated."
+//   });
+// });
+
 app.use(express.static(__dirname + '/public'));
 
 hbs.registerHelper('getCurrentYear', () => {
