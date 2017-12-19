@@ -14,3 +14,8 @@ We can create functions named 'helpers' and we can use them inside templates
 
 
 # Adding Version control GIT
+
+# Setting up Github & SSH keys
+google github ssh keys
+
+# Deploying your apps
